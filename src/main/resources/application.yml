@@ -1,28 +1,11 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/test
-    username: root
-    password: my_secret_password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
   jpa:
-    hibernate:
-      ddl-auto: create
-
-
-#spring:
-#  datasource:
-#    url: jdbc:h2:mem:test
-#    username: sa
-#    password: password
-#    driver-class-name: org.h2.Driver
-#  jpa:
-#    database-platform: org.hibernate.dialect.H2Dialect
-#  jpa:
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.H2Dialect
-#    hibernate:
-#      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
 
   jackson:
     time-zone: America/Santiago
@@ -43,5 +26,5 @@ general:
     secret: my-ultra-mega-secret
     expiration: 3600000
   regex:
-#    Minimo 8 caracteres, incluyendo alguna mayuscula
+#    Minimo 8 caracteres, incluyendo alguna mayuscula y un numero
     password: ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$

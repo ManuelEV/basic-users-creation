@@ -1,6 +1,7 @@
 package cl.bci.pruebatecnica.controller;
 
 import cl.bci.pruebatecnica.dto.UserDTO;
+import cl.bci.pruebatecnica.model.User;
 import cl.bci.pruebatecnica.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +23,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("")
-    public ResponseEntity<?> store(@Valid @RequestBody UserDTO userDTO) {
+    public ResponseEntity<User> storeUser(@Valid @RequestBody UserDTO userDTO) {
 
         return ResponseEntity.ok(userService.storeUser(userDTO));
     }
