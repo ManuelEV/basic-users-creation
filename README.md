@@ -9,6 +9,15 @@ La creación de usuarios contiene, entre otras cosas, lo siguiente:
 - Generación de un token JWT a modo de ejemplo con el secret y el tiempo de expiración en el archivo application.yml
 - Test unitarios (JUnit y Mockito) para la mayoría de las clases que lo requieran
 
+# Diagrama
+
+## Arquitectura
+
+![Diagrama_arquitectura](doc/architecture-diagram.png)
+
+## Modelo de datos
+
+![Diagrama_modelo_datos](doc/data-model-diagram.png)
 
 # Instalación
 
